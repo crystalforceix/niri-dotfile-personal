@@ -1,0 +1,1 @@
+packages: niri playerctl brightnessctl aylurs-gtk-shell-git libastal-io-git libastal-git libastal-meta swww fish fuzzel kitty gnome-bluetooth xdg-desktop-portal-gnome cliphist xwayland-satellite htop neofetch fish gtklock wlogout
