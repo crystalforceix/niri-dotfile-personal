@@ -65,29 +65,29 @@ input {
 
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
 
-/-output "eDP-1" {
+output "eDP-1" {
 
-    mode "1920x1080@120.030"
+    mode "1920x1080@60.0"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    scale 1.25
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
 
-    position x=1280 y=0
+    position x=0 y=0
 }
 
 output "HDMI-A-1" {
     // off
     mode "1920x1080@60.0"
-    scale 1.0
+    scale 1.25
 
     // for portrait mode
     // transform "90"
 
-    // position x=0 y=0
+    position x=0 y=0
 
 }
 
@@ -200,6 +200,59 @@ layout {
 animations {
     // Uncomment to turn off all animations.
     // off
+
+    slowdown 2.0
+    window-open {
+      duration-ms 200
+      curve "linear"
+      custom-shader r"
+    
+    vec4 expanding_circle(vec3 coords_geo, vec3 size_geo) {
+    vec3 coords_tex = niri_geo_to_tex * coords_geo;
+    vec4 color = texture2D(niri_tex, coords_tex.st);
+    vec2 coords = (coords_geo.xy - vec2(0.5, 0.5)) * size_geo.xy * 2.0;
+    coords = coords / length(size_geo.xy);
+    float p = niri_clamped_progress;
+    if (p * p <= dot(coords, coords))
+    color = vec4(0.0);
+
+    return color;
+  }
+
+    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+    return expanding_circle(coords_geo, size_geo);
+   }
+  "
+ }
+
+   window-close {
+      duration-ms 250
+      curve "linear"
+      custom-shader r"
+
+    vec4 fall_and_rotate(vec3 coords_geo, vec3 size_geo) {
+    float progress = niri_clamped_progress * niri_clamped_progress;
+    vec2 coords = (coords_geo.xy - vec2(0.5, 1.0)) * size_geo.xy;
+    coords.y -= progress * 1440.0;
+    float random = (niri_random_seed - 0.5) / 2.0;
+    random = sign(random) - random;
+    float max_angle = 0.5 * random;
+    float angle = progress * max_angle;
+    mat2 rotate = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
+    coords = rotate * coords;
+    coords_geo = vec3(coords / size_geo.xy + vec2(0.5, 1.0), 1.0);
+    vec3 coords_tex = niri_geo_to_tex * coords_geo;
+    vec4 color = texture2D(niri_tex, coords_tex.st);
+
+    return color;
+  }
+
+    vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+    return fall_and_rotate(coords_geo, size_geo);
+     }
+    "
+   }
+
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0

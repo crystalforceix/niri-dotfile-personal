@@ -1,22 +1,23 @@
 window {
     font-size: 24pt;
-    color: #ffffff; /* Replace @foreground with actual color */
-    background-color: rgba(30, 30, 46, 0.8);
+    color: #000000; /* Replace @foreground with actual color */
+    background-color: rgba(30,30,46,0.8);
 }
 
 button {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20%;
-    background-color: rgba(200, 220, 255, 0);
+    background-size: 15%;
+    background-color: transparent;
     animation: gradient_f 10s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682);
     border-radius: 80px;
     border: 0px;
     outline-style: none;
 }
 
 button:focus {
+    background-color: transparent;
     background-size: 50%;
     border: 0px;
     outline-style: none;
@@ -24,7 +25,7 @@ button:focus {
 
 button:hover {
     background-color: transparent; 
-    color: #abcdef; /* Replace @color13 with actual color */
+    color: #000000; /* Replace @color13 with actual color */
     background-size: 50%;
     margin: 30px;
     border-radius: 80px;
