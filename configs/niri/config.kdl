@@ -1,7 +1,7 @@
 // --#*Startup program*#--
 
     spawn-at-startup "swww-daemon"
-    spawn-at-startup "~/.config/niri/scripts/agsbarswww.sh"
+    spawn-at-startup "~/.config/niri/scripts/waybarswww.sh"
     spawn-at-startup "~/.config/niri/scripts/clipboardservice.sh"
     spawn-at-startup "xwayland-satellite"
 
@@ -321,7 +321,7 @@ binds {
     Mod+Shift+B allow-when-locked=true { spawn "playerctl" "previous"; }
     
     // Execute a shell scripts
-    Mod+Alt+R { spawn "~/.config/niri/scripts/agsbarswww.sh"; }
+    Mod+Alt+R { spawn "~/.config/niri/scripts/waybarswww.sh"; }
 
     // Power-menu (if doesn't work just spam E keys while holding Mod+Shift)
     Mod+Shift+E { spawn "~/.config/niri/scripts/wlogout.sh"; }
