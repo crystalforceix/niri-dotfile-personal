@@ -4,6 +4,7 @@
     spawn-at-startup "~/.config/niri/scripts/waybarswww.sh"
     spawn-at-startup "~/.config/niri/scripts/clipboardservice.sh"
     spawn-at-startup "xwayland-satellite"
+    spawn-at-startup "dunst"
 
 // --#*Input keyboard*#--
 
@@ -306,14 +307,14 @@ binds {
     // Sound controller
     // The allow-when-locked=true property makes them work even when the session is locked.
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "~/.config/niri/dunstscripts/volume" "up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "~/.config/niri/dunstscripts/volume" "down"; }
+    XF86AudioMute        allow-when-locked=true { spawn "~/.config/niri/dunstscripts/volume" "mute"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
     // Brightness controller
-    XF86MonBrightnessUp allow-when-locked=true {spawn "brightnessctl" "set" "10%+";}
-    XF86MonBrightnessDown allow-when-locked=true {spawn "brightnessctl" "set" "10%-";}
+    XF86MonBrightnessUp allow-when-locked=true {spawn "~/.config/niri/dunstscripts/brightness" "up"; }
+    XF86MonBrightnessDown allow-when-locked=true {spawn "~/.config/niri/dunstscripts/brightness" "down"; }
 
     // Music controller
     Mod+Shift+P allow-when-locked=true { spawn "bash" "-c" "exec ~/.config/niri/scripts/musiccontroller.sh"; }
