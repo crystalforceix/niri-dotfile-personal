@@ -328,7 +328,7 @@ binds {
 
     // Lockscreen
     Mod+L { spawn "~/.config/niri/scripts/gtklock.sh"; }
-    
+
     // Keybinds of app
     Mod+E { spawn "nautilus"; }
     Mod+Alt+Slash { spawn "fuzzel"; }
