@@ -1,13 +1,13 @@
 #!/bin/sh
 
 down() {
-brightnessctl s 10%-
+brightnessctl s 5%-
 brightness=$(light -g)
 dunstify -a "BRIGHTNESS" "Decreasing to $brightness%" -h int:value:"$brightness" -i ~/.config/dunst/assets/ui/brightness_down.png -r 2593 -u normal
 }
 
 up() {
-brightnessctl s +10%
+brightnessctl s +5%
 brightness=$(light -g)
 dunstify -a "BRIGHTNESS" "Increasing to $brightness%" -h int:value:"$brightness" -i ~/.config/dunst/assets/ui/brightness_up.png -r 2593 -u normal
 }
