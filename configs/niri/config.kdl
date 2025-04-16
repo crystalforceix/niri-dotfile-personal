@@ -413,10 +413,10 @@ binds {
 
     // Mouse binds
 
-    Mod+Alt+WheelScrollUp          { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    Mod+Alt+WheelScrollDown        { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
-    Mod+Shift+Alt+WheelScrollDown  { spawn "brightnessctl" "set" "2%+";}
-    Mod+Shift+Alt+WheelScrollUp    { spawn "brightnessctl" "set" "2%-";}
+    Mod+Alt+WheelScrollUp          { spawn "~/.config/niri/dunstscripts/volume" "up"; }
+    Mod+Alt+WheelScrollDown        { spawn "~/.config/niri/dunstscripts/volume" "down"; }
+    Mod+Shift+Alt+WheelScrollUp    { spawn "~/.config/niri/dunstscripts/brightness" "up"; }
+    Mod+Shift+Alt+WheelScrollDown  { spawn "~/.config/niri/dunstscripts/brightness" "down"; }
 
     Mod+Ctrl+WheelScrollDown         cooldown-ms=150   { focus-workspace-down; }
     Mod+Ctrl+WheelScrollUp           cooldown-ms=150   { focus-workspace-up; }
@@ -431,10 +431,10 @@ binds {
 
     // Touchpad binds
 
-    Mod+Alt+TouchpadScrollDown   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    Mod+Alt+TouchpadScrollUp     { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
-    Mod+Ctrl+TouchpadScrollDown  { spawn "brightnessctl" "set" "2%+";}
-    Mod+Ctrl+TouchpadScrollUp    { spawn "brightnessctl" "set" "2%-";}
+    Mod+Alt+TouchpadScrollDown   { spawn "~/.config/niri/dunstscripts/volume" "up"; }
+    Mod+Alt+TouchpadScrollUp     { spawn "~/.config/niri/dunstscripts/volume" "down"; }
+    Mod+Ctrl+TouchpadScrollDown  { spawn "~/.config/niri/dunstscripts/brightness" "up"; }
+    Mod+Ctrl+TouchpadScrollUp    { spawn "~/.config/niri/dunstscripts/brightness" "down"; }
 
     Mod+TouchpadScrollDown            cooldown-ms=150   { focus-workspace-down; }
     Mod+TouchpadScrollUp              cooldown-ms=150   { focus-workspace-up; }
