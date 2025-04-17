@@ -160,7 +160,21 @@
     // Choose the order of the modules
     "modules-left": ["mpris"],
     "modules-center": ["custom/streamplay", "wlr/taskbar"],
-    "modules-right": ["tray", "custom/unmount", "pulseaudio", "custom/clipboard"],
+    "modules-right": ["group/traystatus"],
+
+    "group/traystatus": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/clipboard",
+            "tray",
+            "pulseaudio",
+            "custom/unmount"
+        ]
+    },
     "mpris": {
         //"interval": 5,
         "dynamic-order": ["artist", "title"],

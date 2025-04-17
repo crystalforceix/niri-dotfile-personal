@@ -1,4 +1,4 @@
-packages: niri playerctl brightnessctl swww fish fuzzel kitty gnome-bluetooth xdg-desktop-portal-gnome cliphist xwayland-satellite htop neofetch fish gtklock wlogout waybar tuned-ppd otf-font-awesome ttf-font-logos dunst pamixer light
+packages: niri playerctl brightnessctl swww fish fuzzel kitty gnome-bluetooth xdg-desktop-portal-gnome cliphist xwayland-satellite htop neofetch fish gtklock wlogout waybar tuned-ppd otf-font-awesome ttf-font-logos dunst pamixer light pavucontrol
 
 
 option for fresh arch installed: gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
