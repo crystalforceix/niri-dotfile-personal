@@ -413,10 +413,10 @@ binds {
 
     // Mouse binds
 
-    Mod+Alt+WheelScrollUp          { spawn "~/.config/niri/dunstscripts/volume" "up"; }
-    Mod+Alt+WheelScrollDown        { spawn "~/.config/niri/dunstscripts/volume" "down"; }
-    Mod+Shift+Alt+WheelScrollUp    { spawn "~/.config/niri/dunstscripts/brightness" "up"; }
-    Mod+Shift+Alt+WheelScrollDown  { spawn "~/.config/niri/dunstscripts/brightness" "down"; }
+    Mod+Alt+WheelScrollUp            cooldown-ms=100   { spawn "~/.config/niri/dunstscripts/volume" "up"; }
+    Mod+Alt+WheelScrollDown          cooldown-ms=100   { spawn "~/.config/niri/dunstscripts/volume" "down"; }
+    Mod+Shift+Alt+WheelScrollUp      cooldown-ms=100   { spawn "~/.config/niri/dunstscripts/brightness" "up"; }
+    Mod+Shift+Alt+WheelScrollDown    cooldown-ms=100   { spawn "~/.config/niri/dunstscripts/brightness" "down"; }
 
     Mod+Ctrl+WheelScrollDown         cooldown-ms=150   { focus-workspace-down; }
     Mod+Ctrl+WheelScrollUp           cooldown-ms=150   { focus-workspace-up; }
@@ -431,10 +431,10 @@ binds {
 
     // Touchpad binds
 
-    Mod+Alt+TouchpadScrollDown   { spawn "~/.config/niri/dunstscripts/volume" "up"; }
-    Mod+Alt+TouchpadScrollUp     { spawn "~/.config/niri/dunstscripts/volume" "down"; }
-    Mod+Ctrl+TouchpadScrollDown  { spawn "~/.config/niri/dunstscripts/brightness" "up"; }
-    Mod+Ctrl+TouchpadScrollUp    { spawn "~/.config/niri/dunstscripts/brightness" "down"; }
+    Mod+Alt+TouchpadScrollDown        cooldown-ms=100  { spawn "~/.config/niri/dunstscripts/volume" "up"; }
+    Mod+Alt+TouchpadScrollUp          cooldown-ms=100  { spawn "~/.config/niri/dunstscripts/volume" "down"; }
+    Mod+Ctrl+TouchpadScrollDown       cooldown-ms=100  { spawn "~/.config/niri/dunstscripts/brightness" "up"; }
+    Mod+Ctrl+TouchpadScrollUp         cooldown-ms=100  { spawn "~/.config/niri/dunstscripts/brightness" "down"; }
 
     Mod+TouchpadScrollDown            cooldown-ms=150   { focus-workspace-down; }
     Mod+TouchpadScrollUp              cooldown-ms=150   { focus-workspace-up; }
