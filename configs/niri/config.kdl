@@ -487,6 +487,7 @@ environment {
     GLFW_IM_MODULE "ibus"
     INPUT_METHOD "fcitx"
     DISPLAY ":0"
+    QT_QPA_PLATFORM "xcb"
 }
 
     // --#*Skip a keybinds board at startup*#--

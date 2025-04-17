@@ -1,4 +1,4 @@
-packages: niri playerctl brightnessctl swww fish fuzzel kitty gnome-bluetooth xdg-desktop-portal-gnome cliphist xwayland-satellite htop neofetch fish gtklock wlogout waybar tuned-ppd otf-font-awesome ttf-font-logos dunst pamixer light pavucontrol
+packages: niri playerctl brightnessctl swww fish fuzzel kitty gnome-bluetooth xdg-desktop-portal-gnome cliphist xwayland-satellite htop neofetch fish gtklock wlogout waybar tuned-ppd otf-font-awesome ttf-font-logos dunst pamixer light pavucontrol qt6-wayland
 
 
 option for fresh arch installed: gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
