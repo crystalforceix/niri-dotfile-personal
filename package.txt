@@ -5,3 +5,5 @@ option for fresh arch installed: gstreamer gst-libav gst-plugins-bad gst-plugins
 
 set to dark mode in terminal: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 			      gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+
+package fix obs-issue on niri just install or reinstall it: libxkbcommon-x11 qt5-base libxcb xcb-util xcb-util-cursor xcb-util-wm
