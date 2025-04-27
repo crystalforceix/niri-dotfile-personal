@@ -298,8 +298,8 @@ window-rule {
 
 window-rule {
     open-maximized true
-    opacity 0.95    
-    match is-active=false
+    // opacity 0.95    
+    // match is-active=false
 }
 
     // --#*Key bindings*#--
